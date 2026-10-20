@@ -1,6 +1,8 @@
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { routing } from '../../i18n/routing';
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import "../globals.css";
 
 export default async function LocaleLayout({
   children,
@@ -15,5 +17,12 @@ export default async function LocaleLayout({
     notFound();   
   }
 
-  return <NextIntlClientProvider>{children}</NextIntlClientProvider>;
+  return (
+  <html lang={locale}>
+    <body>
+      
+      <NextIntlClientProvider > <LanguageSwitcher /> {children}</NextIntlClientProvider>
+    </body>
+  </html>
+);
 }
