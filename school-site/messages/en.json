@@ -1,5 +1,19 @@
 {
   "Site": { "name": "Sri Vidhya Niketan" },
   "Home": { "title": "Welcome to Sri Vidhya Niketan" },
-  "About": { "title": "About the School" }
+  "About": { "title": "About the School" },
+  "Nav": {
+    "home": "Home",
+    "about": "About",
+    "academics": "Academics",
+    "admissions": "Admissions",
+    "events": "Events",
+    "contact": "Contact Us"
+  },
+  "Header": {
+    "mainNavigation": "Main navigation",
+    "skipToContent": "Skip to main content",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  }
 }

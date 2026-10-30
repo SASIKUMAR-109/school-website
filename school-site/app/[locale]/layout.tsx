@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { routing } from '../../i18n/routing';
-import LanguageSwitcher from "@/components/LanguageSwitcher";
+import Header from "@/components/Header";
 import "../globals.css";
 
 export default async function LocaleLayout({
@@ -19,9 +19,9 @@ export default async function LocaleLayout({
 
   return (
   <html lang={locale}>
-    <body>
+    <body className="bg-background text-text">
       
-      <NextIntlClientProvider > <LanguageSwitcher /> {children}</NextIntlClientProvider>
+      <NextIntlClientProvider >  <Header/> {children}</NextIntlClientProvider>
     </body>
   </html>
 );
