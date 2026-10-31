@@ -12,7 +12,7 @@ export default function MobileMenu({ links, openLabel,closeLabel,navLabel }: Mob
     const [isOpen, setIsOpen] = useState(false);
     return (
     <div>
-        <button type = "button" className = "p-2 lg:hidden text-2xl text-primary" aria-label = {isOpen?closeLabel:openLabel} onClick = { () => setIsOpen(!isOpen)} aria-expanded = {isOpen}>{isOpen ? "✕" : "☰"} </button>
+        <button type = "button" className = "p-1 lg:hidden text-xl text-primary" aria-label = {isOpen?closeLabel:openLabel} onClick = { () => setIsOpen(!isOpen)} aria-expanded = {isOpen}>{isOpen ? "✕" : "☰"} </button>
         {isOpen && (
   <nav aria-label ={navLabel} className = "absolute left-0 right-0 top-full flex flex-col bg-surface border-b z-50 border-surface-alt lg:hidden">
     {links.map((item) => (

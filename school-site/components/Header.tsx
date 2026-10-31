@@ -15,8 +15,8 @@ export default async function Header() {
   ))
   return (
 
-    <header className = "flex items-center justify-between px-6 py-4 bg-surface border-b border-surface-alt relative gap-3"><Link href = {"/"} className = "flex items-center gap-3 whitespace-nowrap font-bold text-primary text-xl hover:text-primary-dark" ><Image src = "/logo.webp" alt="" width={56} height={60}  priority className="shrink-0"  /> {tSite('name')}</Link>
-    <div className = "flex items-center gap-6">
+    <header className = "flex items-center justify-between px-3 lg:px-6 py-4 bg-surface border-b border-surface-alt relative gap-2"><Link href = {"/"} className = "flex items-center gap-3 font-bold text-primary min-w-0 hover:text-primary-dark" ><Image src = "/logo.webp" alt="" width={56} height={60}  priority className="shrink-0 w-9 h-auto lg:w-14"  /><span className="min-w-0 leading-snug text-sm lg:text-xl whitespace-nowrap">{tSite('name')}</span></Link>
+    <div className = "flex items-center shrink-0 lg:gap-6 gap-2">
     <nav aria-label = {tHeader('mainNavigation')} className = "hidden lg:flex gap-3">
       
         {
