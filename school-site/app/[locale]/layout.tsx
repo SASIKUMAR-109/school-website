@@ -20,9 +20,11 @@ export default async function LocaleLayout({
 
   return (
   <html lang={locale}>
-    <body className="bg-background text-text">
+    <body className="bg-background text-text flex min-h-screen flex-col">
       
-      <NextIntlClientProvider >  <Header/> {children} <Footer/></NextIntlClientProvider>
+      <NextIntlClientProvider >  <Header/> 
+      <main className="flex-1">{children}</main> 
+      <Footer/></NextIntlClientProvider>
     </body>
   </html>
 );

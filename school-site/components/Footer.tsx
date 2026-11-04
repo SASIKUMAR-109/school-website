@@ -3,7 +3,7 @@ import { Link } from "@/i18n/navigation";
 import { navItems } from "@/lib/nav";
 import { siteInfo } from "@/lib/site";
 import Image from "next/image";
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail,ChevronRight } from "lucide-react";
 
 export default async function Footer() {
   const tSite = await getTranslations("Site");
@@ -27,9 +27,9 @@ export default async function Footer() {
           <Image
             src="/logo.webp"
             alt=""
-            width={96}
-            height={103}
-            className="h-auto w-14 shrink-0 lg:w-24"
+            width={128}
+            height={137}
+            className="h-auto w-14 shrink-0 lg:w-28 xl:w-32"
           />
           <div className="flex flex-col items-center gap-2 lg:items-start lg:border-l lg:border-white/20 lg:pl-6">
           <h2 className="inline-block border-b-2 border-accent pb-2 text-lg font-bold lg:text-xl">
@@ -47,10 +47,11 @@ export default async function Footer() {
                 <li key={item.key}>
                   <Link
                     href={item.href}
-                    className="block rounded-xl border border-white/25 px-3 py-3 text-center hover:text-accent lg:border-0 lg:px-0 lg:py-0 lg:text-left"
-                  >
+                    className="block rounded-xl border border-white/25 px-3 py-3 text-center hover:text-accent lg:flex lg:items-center lg:gap-2 lg:border-0 lg:px-0 lg:py-0 lg:text-left"
+                    >
+                    <ChevronRight className="hidden size-4 shrink-0 text-accent lg:block" aria-hidden="true" />
                     {tNav(item.key)}
-                  </Link>
+                    </Link>
                 </li>
               ))}
             </ul>
@@ -61,25 +62,25 @@ export default async function Footer() {
           <h2 className="inline-block border-b-2 border-accent pb-2 text-lg font-bold">{tFooter("contactHeading")}</h2>
             <ul className="mt-4 space-y-3 text-sm lg:text-base">
                 <li className="flex items-start gap-3">
-                    <span className="mt-0.5 shrink-0 text-accent">
-                    <MapPin className="size-5" aria-hidden="true" />
+                    <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-primary-dark text-accent">
+                        <MapPin className="size-4" aria-hidden="true" />
                     </span>
-                    <span>{tFooter("address")}</span>
+                    <span className="pt-1.5">{tFooter("address")}</span>
                 </li>
-                <li className="flex items-start gap-3">
-                    <span className="mt-0.5 shrink-0 text-accent">
-                    <Phone className="size-5" aria-hidden="true" />
+                <li className="flex items-center gap-3">
+                    <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-primary-dark text-accent">
+                        <Phone className="size-4" aria-hidden="true" />
                     </span>
                     <a href={`tel:${siteInfo.phone}`} className="hover:text-accent">
-                    {siteInfo.phoneDisplay}
+                        {siteInfo.phoneDisplay}
                     </a>
-                </li>
-                <li className="flex items-start gap-3">
-                    <span className="mt-0.5 shrink-0 text-accent">
-                    <Mail className="size-5" aria-hidden="true" />
+                    </li>
+                <li className="flex items-center gap-3">
+                    <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-primary-dark text-accent">
+                        <Mail className="size-4" aria-hidden="true" />
                     </span>
                     <a href={`mailto:${siteInfo.email}`} className="min-w-0 break-words hover:text-accent">
-                    {siteInfo.email}
+                        {siteInfo.email}
                     </a>
                 </li>
                 <li className="pt-2">
