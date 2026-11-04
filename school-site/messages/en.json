@@ -15,5 +15,14 @@
     "skipToContent": "Skip to main content",
     "openMenu": "Open menu",
     "closeMenu": "Close menu"
-  }
+  },
+  "Footer": {
+  "tagline": "Nurturing young minds with knowledge, values and confidence for a brighter future.",
+  "quickLinksHeading": "Quick Links",
+  "quickLinksLabel": "Footer navigation",
+  "contactHeading": "Contact",
+  "address": "West Vipparru, Pentapadu Mandal, West Godavari District, Andhra Pradesh - 534165",
+  "mapLinkText": "View on Google Maps",
+  "rights": "© {year} {name}. All rights reserved."
+}
 }
