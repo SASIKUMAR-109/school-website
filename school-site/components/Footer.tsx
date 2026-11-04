@@ -71,7 +71,7 @@ export default async function Footer() {
                     <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-primary-dark text-accent">
                         <Phone className="size-4" aria-hidden="true" />
                     </span>
-                    <a href={`tel:${siteInfo.phone}`} className="hover:text-accent">
+                    <a href={`tel:${siteInfo.phone}`} className="inline-flex min-h-11 items-center hover:text-accent lg:min-h-0">
                         {siteInfo.phoneDisplay}
                     </a>
                     </li>
@@ -79,7 +79,7 @@ export default async function Footer() {
                     <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-primary-dark text-accent">
                         <Mail className="size-4" aria-hidden="true" />
                     </span>
-                    <a href={`mailto:${siteInfo.email}`} className="min-w-0 break-words hover:text-accent">
+                    <a href={`mailto:${siteInfo.email}`} className="min-w-0 break-words inline-flex min-h-11 items-center hover:text-accent lg:min-h-0">
                         {siteInfo.email}
                     </a>
                 </li>
