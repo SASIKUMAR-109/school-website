@@ -24,5 +24,10 @@
   "address": "West\u00a0Vipparru, Pentapadu\u00a0Mandal, West\u00a0Godavari\u00a0District, Andhra\u00a0Pradesh\u00a0534165",
   "mapLinkText": "View on Google Maps",
   "rights": "© {year} {name}. All rights reserved."
-}
-}
+        },
+  "hero": {
+  "heroEyebrow": "English Medium School · West Vipparru",
+  "ctaAdmission": "Apply for Admission",
+  "ctaAcademics": "Explore Academics"
+    }
+} 
