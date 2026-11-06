@@ -13,7 +13,7 @@ export default async function HomePage() {
       <div className="absolute inset-0 bg-gradient-to-r from-primary-dark/90 via-primary-dark/70 to-primary-dark/40 lg:from-primary-dark/85 lg:via-primary-dark/40 lg:to-transparent" aria-hidden="true"></div>
         <div className="flex flex-col justify-center relative z-10 px-4 lg:px-6 flex-1  pb-12 lg:pb-16">
            {locale !== 'te' && welcome}
-           <h1 className={`text-3xl font-bold sm:text-4xl lg:text-6xl ${locale === 'te' ? 'leading-[1.4]' : 'leading-tight'}`}><span className='block text-white'>{thero('nameLine1')}</span><span className='block text-accent-light'>{thero('nameLine2')}</span></h1>
+           <h1 className={`text-3xl font-bold sm:text-4xl lg:text-5xl xl:text-6xl ${locale === 'te' ? 'leading-[1.4]' : 'leading-tight'}`}><span className='block text-white'>{thero('nameLine1')}</span><span className='block text-accent-light'>{thero('nameLine2')}</span></h1>
             {locale === 'te' && welcome}
             <div className='mt-4 h-1 w-20 bg-accent'></div>
             <p className='font-semibold mt-4 text-lg text-white/90'>{thero('heroEyebrow')}</p>
