@@ -8,10 +8,10 @@ export default async function HomePage() {
   const locale = await getLocale();
   const welcome = (<p className="my-3 text-sm font-semibold uppercase tracking-[0.3em] [&:lang(te)]:tracking-normal [&:lang(te)]:leading-[1.4]  text-white">{thero('welcome')}</p>)
   return (
-    <section className="relative min-h-[70vh]">
+    <section className="relative flex flex-col -mb-12 min-h-[calc(100svh-4.5rem)] lg:min-h-[calc(100svh-7rem)]">
       <HeroSlides/>
-      <div className="absolute inset-0 bg-gradient-to-r from-primary-dark/85 via-primary-dark/40 to-transparent" aria-hidden="true"></div>
-        <div className="flex flex-col justify-center relative z-10 px-4 lg:px-6 min-h-[70vh]">
+      <div className="absolute inset-0 bg-gradient-to-r from-primary-dark/90 via-primary-dark/70 to-primary-dark/40 lg:from-primary-dark/85 lg:via-primary-dark/40 lg:to-transparent" aria-hidden="true"></div>
+        <div className="flex flex-col justify-center relative z-10 px-4 lg:px-6 flex-1  pb-12 lg:pb-16">
            {locale !== 'te' && welcome}
            <h1 className={`text-3xl font-bold sm:text-4xl lg:text-6xl ${locale === 'te' ? 'leading-[1.4]' : 'leading-tight'}`}><span className='block text-white'>{thero('nameLine1')}</span><span className='block text-accent-light'>{thero('nameLine2')}</span></h1>
             {locale === 'te' && welcome}
