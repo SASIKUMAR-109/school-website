@@ -12,6 +12,7 @@
     --color-text:#183321;
     --color-text-muted:#4A5D50;
     --color-link:#0C3C9C;
+    --font-sans:var(--font-latin),var(--font-telugu),system-ui, sans-serif;
 }
 
 
