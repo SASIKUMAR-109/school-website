@@ -19,7 +19,7 @@ export default async function Header() {
     <header className = "lg:pb-6 pt-3 pb-5 lg:pt-4 bg-surface relative">
     <div className="flex items-center justify-between gap-2 px-3 lg:px-6">
     <Link href = {"/"} className = "flex items-center gap-3 font-bold text-primary min-w-0 hover:text-primary-dark" >
-    <Image src = "/logo.webp" alt="" width={56} height={60}  priority className="shrink-0 w-9 h-auto lg:w-14"  /><span className="min-w-0 leading-snug text-sm min-[360px]:text-base lg:text-xl whitespace-nowrap">{tSite('name')}</span></Link>
+    <Image src = "/logo.webp" alt="" width={56} height={60}  priority className="shrink-0 w-9 h-auto lg:w-14"  /><span className="min-w-0 leading-snug text-sm min-[400px]:text-base lg:text-xl whitespace-nowrap">{tSite('name')}</span></Link>
     <div className = "flex items-center shrink-0 lg:gap-6 gap-2">
     <nav aria-label = {tHeader('mainNavigation')} className = "hidden lg:flex lg:gap-4 xl:gap-8">
       <NavLinks links={mobileLinks} />
