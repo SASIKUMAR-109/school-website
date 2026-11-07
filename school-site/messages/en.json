@@ -1,7 +1,6 @@
 {
   "Site": { "name": "Sri Vidhya Nikethan" },
   "Home": { "title": "Welcome to Sri Vidhya Nikethan" },
-  "About": { "title": "About the School" },
   "Nav": {
     "home": "Home",
     "about": "About",
@@ -32,5 +31,27 @@
   "welcome": "Welcome to",
   "nameLine1": "Sri Vidhya",
   "nameLine2": "Nikethan"
-    }
+    },
+ "About": {
+  "title": "About the School",
+  "eyebrow": "About Us",
+  "introBody": "Sri Vidhya Nikethan is an English medium school in West Vipparru where children learn beyond textbooks, close to nature.",
+  "natureEducation": "Nature Education",
+  "principalHeading": "Our Principal",
+  "principalName": "Tadela Ramesh",
+  "principalRole": "Principal",
+  "educationLabel": "Education",
+  "educationValue": "M.A., M.Sc., B.Ed.",
+  "experienceLabel": "Teaching Experience",
+  "experienceValue": "15+ Years",
+  "principalPhotoAlt": "Tadela Ramesh, Principal",
+  "learningBeyondBooks": "Learning Beyond Textbooks",
+  "highlightsHeading": "How We Teach",
+  "ecoTitle": "Plastic-Free Celebrations",
+  "ecoBody": "School functions are decorated with leaves and natural materials, and meals are served on paper plates or banana leaves instead of plastic.",
+  "fieldsTitle": "Learning in the Fields",
+  "fieldsBody": "Children visit crop fields to see how food, such as rice, is grown, and some lessons are held outdoors.",
+  "storiesTitle": "Newspapers and Stories of Leaders",
+  "storiesBody": "Children read the newspaper every day, and teachers share stories of leaders and how India won its independence."
+  }
 } 
