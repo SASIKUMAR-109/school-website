@@ -9,6 +9,7 @@ import {
   GraduationCap,
   Award,
   Target,
+  ChevronDown
 } from 'lucide-react';
 
 export default async function AboutPage() {
@@ -151,7 +152,7 @@ export default async function AboutPage() {
               <span className="h-0.5 w-8 bg-accent" aria-hidden="true"></span>
             </div>
 
-            <div className="mt-4 flex flex-1 flex-col divide-y divide-primary/10">
+            <div className="mt-4 hidden flex-1 flex-col divide-y divide-primary/10 lg:flex">
               {highlights.map((item) => (
                 <div className="flex flex-1 items-center gap-3 py-4 lg:gap-4" key={item.title}>
                   <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-surface-alt text-primary lg:size-12">
@@ -168,6 +169,25 @@ export default async function AboutPage() {
                     <p className="mt-1 leading-relaxed text-text-muted">{item.body}</p>
                   </div>
                 </div>
+              ))}
+            </div>
+            <div className="mt-4 divide-y divide-primary/10 lg:hidden">
+              {highlights.map((item) => (
+                <details className="group py-3" key={item.title}>
+                  <summary className="flex cursor-pointer list-none items-center gap-3 [&::-webkit-details-marker]:hidden">
+                    <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-surface-alt text-primary">
+                      <item.Icon className="size-5" aria-hidden="true" />
+                    </div>
+                    <h3 className={`font-bold text-primary ${isTe ? 'leading-[1.4]' : 'leading-snug'}`}>
+                      {item.title}
+                    </h3>
+                    <ChevronDown
+                      className="ml-auto size-5 shrink-0 text-primary transition-transform group-open:rotate-180"
+                      aria-hidden="true"
+                    />
+                  </summary>
+                  <p className="mt-2 pl-[52px] leading-relaxed text-text-muted">{item.body}</p>
+                </details>
               ))}
             </div>
           </article>
