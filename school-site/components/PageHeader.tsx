@@ -6,7 +6,7 @@ type PageHeaderProps = {
 
 export default function PageHeader({title,intro } : PageHeaderProps){
         return (
-            <section className="bg-surface-alt">
+            <section className="">
             <div className="px-4 py-10 lg:px-6 lg:py-14">
                 <h1 className="text-3xl font-bold text-primary lg:text-4xl leading-snug">{title}</h1>
                 <div className="mt-4 h-1 w-20 bg-accent"></div>

@@ -1,5 +1,7 @@
 {
-  "Site": { "name": "Sri Vidhya Nikethan" },
+  "Site": { "name": "Sri Vidhya Nikethan",
+  "address": "West\u00a0Vipparru, Pentapadu\u00a0Mandal, West\u00a0Godavari\u00a0District, Andhra\u00a0Pradesh\u00a0534165",
+  "mapLinkText": "View on Google Maps" },
   "Home": { "title": "Welcome to Sri Vidhya Nikethan" },
   "Nav": {
     "home": "Home",
@@ -20,8 +22,6 @@
   "quickLinksHeading": "Quick Links",
   "quickLinksLabel": "Footer navigation",
   "contactHeading": "Contact",
-  "address": "West\u00a0Vipparru, Pentapadu\u00a0Mandal, West\u00a0Godavari\u00a0District, Andhra\u00a0Pradesh\u00a0534165",
-  "mapLinkText": "View on Google Maps",
   "rights": "© {year} {name}. All rights reserved."
         },
   "hero": {
@@ -54,5 +54,17 @@
   "storiesTitle": "Newspapers and Stories of Leaders",
   "storiesBody": "Children read the newspaper every day, and teachers share stories of leaders and how India won its independence.",
   "principalGoal": "Our principal's goal is to shape responsible citizens by teaching truth, practical knowledge, awareness of how elections work, social responsibility and current social issues, beyond the textbooks."
-  }
+  },
+  "Contact": {
+  "title": "Contact Us",
+  "intro": "Visit us in West Vipparru, or reach us by phone or email.",
+  "detailsHeading": "Get in Touch",
+  "addressLabel": "Address",
+  "phoneLabel": "Phone",
+  "emailLabel": "Email",
+  "callButton": "Call",
+  "whatsappButton": "WhatsApp",
+  "mapTitle": "Map showing the location of Sri Vidhya Nikethan",
+  "directions": "Get directions"
+}
 } 

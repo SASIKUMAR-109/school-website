@@ -65,7 +65,7 @@ export default async function Footer() {
                     <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-primary-dark text-accent">
                         <MapPin className="size-4" aria-hidden="true" />
                     </span>
-                    <span className="pt-1.5">{tFooter("address")}</span>
+                    <span className="pt-1.5">{tSite("address")}</span>
                 </li>
                 <li className="flex items-center gap-3">
                     <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-primary-dark text-accent">
@@ -89,7 +89,7 @@ export default async function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block rounded-full border border-white px-4 py-2 text-white hover:bg-white hover:text-primary">
-                    {tFooter("mapLinkText")}</a>
+                    {tSite("mapLinkText")}</a>
                 </li>
             </ul>
         </div>
