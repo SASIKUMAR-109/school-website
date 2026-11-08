@@ -1,6 +1,6 @@
 import {getTranslations,getLocale} from 'next-intl/server';
 import {siteInfo} from '@/lib/site';
-import {MapPin, Phone, Mail, MessageCircle, Navigation} from 'lucide-react';
+import {MapPin, Phone, Mail , Navigation} from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -18,7 +18,7 @@ export default async function ContactPage() {
   return (
     <>
     <PageHeader title={t('title')}  intro={t('intro')}/>
-    <section className='px-4 pb-12 lg:px-6 lg:pb-16'>
+    <section className='px-4 pb-8 lg:px-6 lg:pb-16'>
       <div className='grid gap-6 lg:grid-cols-2'>
         <article className='flex flex-col rounded-2xl border border-primary/10 bg-surface p-5 shadow-sm lg:p-6'>
         <div className='flex items-center gap-3'>
@@ -31,7 +31,7 @@ export default async function ContactPage() {
                 <li className='flex items-start gap-4 py-4' key = {item.label}><span className='flex size-12 shrink-0 items-center justify-center rounded-xl bg-surface-alt text-primary'><item.Icon className="size-6" aria-hidden="true"/></span>
                 <div className='min-w-0 break-words'>
                   <p className='text-primary font-bold'>{item.label}</p>
-                  {item.href ? <a href = {item.href} className='inline-flex min-h-11 items-center hover:text-primary lg:min-h-0'>{item.value}</a> : <p className='inline-flex min-h-11 items-center lg:min-h-0'>{item.value}</p>}
+                  {item.href ? <a href = {item.href} className='-my-2 inline-block py-2 hover:text-primary'>{item.value}</a> : <p>{item.value}</p>}
                 </div>
                 </li>
                 
