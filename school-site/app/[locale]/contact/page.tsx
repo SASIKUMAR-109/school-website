@@ -29,9 +29,9 @@ export default async function ContactPage() {
             {
               contactRows.map((item)=>(
                 <li className='flex items-start gap-4 py-4' key = {item.label}><span className='flex size-12 shrink-0 items-center justify-center rounded-xl bg-surface-alt text-primary'><item.Icon className="size-6" aria-hidden="true"/></span>
-                <div>
+                <div className='min-w-0 break-words'>
                   <p className='text-primary font-bold'>{item.label}</p>
-                  {item.href ? <a href = {item.href} className='inline-flex min-h-11 items-center hover:text-primary lg:min-h-0'>{item.value}</a> : <p className='inline-flex min-h-11 items-center hover:text-primary lg:min-h-0'>{item.value}</p>}
+                  {item.href ? <a href = {item.href} className='inline-flex min-h-11 items-center hover:text-primary lg:min-h-0'>{item.value}</a> : <p className='inline-flex min-h-11 items-center lg:min-h-0'>{item.value}</p>}
                 </div>
                 </li>
                 
@@ -41,7 +41,7 @@ export default async function ContactPage() {
           </ul>
           <div className='mt-auto grid grid-cols-2 gap-3 pt-6'>
             <a className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-4 py-3 text-sm font-semibold text-white sm:text-base" href={`tel:${siteInfo.phone}`}><Phone className='size-5' aria-hidden="true"/>{t('callButton')}</a>
-            <a href={`mailto:${siteInfo.email}`} className='inline-flex items-center justify-center gap-2 rounded-full bg-surface px-4 py-3 text-sm font-semibold text-primary sm:text-base border-2 border-primary'><FaWhatsapp className='size-6' aria-hidden="true"/>{t('whatsappButton')}</a>
+            <a href={`https://wa.me/${siteInfo.phone.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" className='inline-flex items-center justify-center gap-2 rounded-full bg-surface px-4 py-3 text-sm font-semibold text-primary sm:text-base border-2 border-primary'><FaWhatsapp className='size-6' aria-hidden="true"/>{t('whatsappButton')}</a>
           </div>
        </article>
         <article className='flex flex-col rounded-2xl border border-primary/10 bg-surface p-3 shadow-sm lg:p-4'>
