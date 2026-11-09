@@ -1,8 +1,9 @@
 import {getTranslations,getLocale} from 'next-intl/server';
-import {siteInfo} from '@/lib/site';
+import {siteInfo,whatsappNumber} from '@/lib/site';
 import {MapPin, Phone, Mail , Navigation} from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
 import { FaWhatsapp } from "react-icons/fa";
+
 
 export default async function ContactPage() {
   const t = await getTranslations('Contact');
@@ -41,7 +42,7 @@ export default async function ContactPage() {
           </ul>
           <div className='mt-auto grid grid-cols-2 gap-3 pt-6'>
             <a className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-4 py-3 text-sm font-semibold text-white sm:text-base" href={`tel:${siteInfo.phone}`}><Phone className='size-5' aria-hidden="true"/>{t('callButton')}</a>
-            <a href={`https://wa.me/${siteInfo.phone.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" className='inline-flex items-center justify-center gap-2 rounded-full bg-surface px-4 py-3 text-sm font-semibold text-primary sm:text-base border-2 border-primary'><FaWhatsapp className='size-6' aria-hidden="true"/>{t('whatsappButton')}</a>
+            <a href={`https://wa.me/${whatsappNumber}`} target="_blank" rel="noopener noreferrer" className='inline-flex items-center justify-center gap-2 rounded-full bg-surface px-4 py-3 text-sm font-semibold text-primary sm:text-base border-2 border-primary'><FaWhatsapp className='size-6' aria-hidden="true"/>{t('whatsappButton')}</a>
           </div>
        </article>
         <article className='flex flex-col rounded-2xl border border-primary/10 bg-surface p-3 shadow-sm lg:p-4'>
