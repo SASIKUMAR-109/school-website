@@ -70,27 +70,32 @@ export default async function AdmissionsPage() {
           <h2 className={`text-2xl font-bold text-primary ${isTe ? 'leading-[1.4]' : 'leading-snug'}`}>{t('stepsHeading')}</h2>
           <span aria-hidden="true" className='block h-1 w-12 rounded-full bg-accent'></span>
           </div>
-          <ol className="mt-8 flex flex-1 flex-col">
+          <ol className="mt-12 flex flex-1 flex-col">
             {
               steps.map((item,i)=>(
-                <li key = {item.title} className='flex flex-1 gap-4'>
-                   <div className="flex flex-col items-center">
+                <li key = {item.title} className={`flex relative flex-1 gap-4 ${i > 0 ? "pt-6" : ""}`}>
+                   <div className={`flex flex-col items-center ${i !== steps.length - 1 ? '-mb-6' : ''}`}>
                   <span aria-hidden="true" className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary font-bold text-white">
                     {i + 1}
                   </span>
                   {i !== steps.length - 1 && <span className="w-0.5 flex-1 bg-primary/30" aria-hidden="true" />}
                  </div>
-                <span className='flex size-12 shrink-0 items-center justify-center rounded-xl bg-surface-alt text-primary'><item.Icon className="size-6" aria-hidden="true" /></span>
-               
-                <div className={`min-w-0 flex-1 pb-6 ${i !== steps.length - 1 ? 'border-b border-primary/10' : ''}`}>
+                <span className='hidden sm:flex size-12 shrink-0 items-center justify-center rounded-xl bg-surface-alt text-primary'><item.Icon className="size-6" aria-hidden="true" /></span>
+                <div className="min-w-0 flex-1 pb-6">
                 <p className='font-bold text-primary '>{item.title}</p>
                 <p className='text-text-muted'>{item.body}</p>
-                </div></li>
+                </div>
+                {i !== steps.length - 1 && (
+                <span aria-hidden="true" className={`absolute left-14 right-0 h-px bg-primary/10 sm:left-[7.5rem] ${
+                  i === 0 ? 'top-[calc(50%+2rem)]' : 'top-[calc(50%+2.75rem)]'
+                }`} />
+              )}</li>
+                
               ))
             }
           </ol>
           <div className="mt-auto grid grid-cols-2 gap-3 pt-6">
-            <a href={`tel:${siteInfo.phone}`} className=' bg-primary text-white inline-flex items-center justify-center gap-2 rounded-full px-4 py-3 text-sm font-semibold sm:text-base'><Phone className='size-5' aria-hidden="true"/>{tc('callButton')}</a>
+            <a href={`tel:${siteInfo.phone}`} className='bg-primary text-white inline-flex items-center justify-center gap-2 rounded-full px-4 py-3 text-sm font-semibold sm:text-base'><Phone className='size-5' aria-hidden="true"/>{tc('callButton')}</a>
             <a href={`https://wa.me/${whatsappNumber}`} className='bg-surface text-primary border-2 border-primary inline-flex items-center justify-center gap-2 rounded-full px-4 py-3 text-sm font-semibold sm:text-base' target="_blank" rel="noopener noreferrer"><FaWhatsapp className='size-6' aria-hidden="true"/>{tc('whatsappButton')}</a>
           </div>
         </article>
