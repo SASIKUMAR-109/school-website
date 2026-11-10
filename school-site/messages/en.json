@@ -2,7 +2,6 @@
   "Site": { "name": "Sri Vidhya Nikethan",
   "address": "West\u00a0Vipparru, Pentapadu\u00a0Mandal, West\u00a0Godavari\u00a0District, Andhra\u00a0Pradesh\u00a0534165",
   "mapLinkText": "View on Google Maps" },
-  "Home": { "title": "Welcome to Sri Vidhya Nikethan" },
   "Nav": {
     "home": "Home",
     "about": "About",
@@ -66,5 +65,30 @@
   "whatsappButton": "WhatsApp",
   "mapTitle": "Map showing the location of Sri Vidhya Nikethan",
   "directions": "Get directions"
+},
+"Admissions": {
+  "title": "Admissions",
+  "intro": "Send us an enquiry and the school team will get in touch with you.",
+  "formHeading": "Admission Enquiry",
+  "parentName": "Parent's name",
+  "parentPhone": "Phone number",
+  "childName": "Child's name",
+  "classApplying": "Class applying for",
+  "selectClass": "Select class",
+  "classNursery": "Nursery",
+  "classLkg": "LKG",
+  "classUkg": "UKG",
+  "classNumber": "Class {number}",
+  "messageLabel": "Message (optional)",
+  "submit": "Send on WhatsApp",
+  "whatsappNote": "This opens WhatsApp with your details filled in. Press send to share them with the school.",
+  "privacyNote": "We use these details only to contact you about admission.",
+  "stepsHeading": "What happens next",
+  "step1Title": "Send your enquiry",
+  "step1Body": "Fill in the form, or call the school.",
+  "step2Title": "The school receives it",
+  "step2Body": "Your details reach the school on WhatsApp.",
+  "step3Title": "We contact you",
+  "step3Body": "The school team checks your details and contacts you with the next steps."
 }
 } 
