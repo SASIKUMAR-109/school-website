@@ -30,33 +30,34 @@ export default function AdmissionForm({ phone, classOptions, labels }: Admission
     const childName = String(data.get('childName') ?? '').trim();
     const classApplying = String(data.get('classApplying') ?? '').trim();
     const message = String(data.get('message') ?? '').trim();
-       const lines = [
-     'Admission enquiry',
-     `Parent's name: ${parentName}`,
-     `Phone: ${parentPhone}`,
-     `Child's name: ${childName}`,
-     `Class: ${classApplying}`,
-   ];
+    const waNumber = phone.replace(/\D/g, '');
+      const lines = [
+                      'Admission enquiry',
+                      `Parent's name: ${parentName}`,
+                      `Phone: ${parentPhone}`,
+                      `Child's name: ${childName}`,
+                      `Class: ${classApplying}`,
+                    ];
     if (message) lines.push(`Message: ${message}`);
-    const url = `https://wa.me/${phone}?text=${encodeURIComponent(lines.join('\n'))}`;
+    const url = `https://wa.me/${waNumber}?text=${encodeURIComponent(lines.join('\n'))}`;
     window.open(url, '_blank', 'noopener,noreferrer');
     }
 
   return (
     <form onSubmit={handleSubmit} className="mt-4 space-y-4">
-        <div className='space-y-4'>
+      <div className='space-y-4'>
         <div>
             <label htmlFor="parentName" className="font-semibold text-primary block">{labels.parentName}</label>
-        <div className="relative mt-1">
+          <div className="relative mt-1">
             <User className="pointer-events-none absolute left-4 top-1/2 size-5 -translate-y-1/2 text-primary/60" aria-hidden="true" />
             <input id="parentName" name="parentName" type="text" required autoComplete="name" maxLength={80} className={inputClass} />
-        </div>
+          </div>
         </div>
         <div>
             <label htmlFor="parentPhone" className="font-semibold text-primary block">{labels.parentPhone}</label>
         <div className="relative mt-1">
        <Phone className="pointer-events-none absolute left-4 top-1/2 size-5 -translate-y-1/2 text-primary/60" aria-hidden="true" />
-            <input id="parentPhone" name="parentPhone" type="tel" inputMode="tel" required autoComplete="tel" minLength={10} maxLength={20} className={inputClass} />
+            <input id="parentPhone" pattern="[6-9][0-9]{9}" title="Enter a valid 10-digit mobile number" name="parentPhone" type="tel" inputMode="numeric" required autoComplete="tel-national" maxLength={10} className={inputClass} />
         </div>
         </div>
         <div>

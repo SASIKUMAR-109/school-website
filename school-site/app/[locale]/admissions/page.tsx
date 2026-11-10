@@ -70,15 +70,19 @@ export default async function AdmissionsPage() {
           <h2 className={`text-2xl font-bold text-primary ${isTe ? 'leading-[1.4]' : 'leading-snug'}`}>{t('stepsHeading')}</h2>
           <span aria-hidden="true" className='block h-1 w-12 rounded-full bg-accent'></span>
           </div>
-          <ol className="mt-4 divide-y divide-primary/10 flex flex-1 flex-col">
+          <ol className="mt-8 flex flex-1 flex-col">
             {
               steps.map((item,i)=>(
-                <li key = {item.title} className='flex  flex-1 items-center gap-4 py-4'>
+                <li key = {item.title} className='flex flex-1 gap-4'>
+                   <div className="flex flex-col items-center">
                   <span aria-hidden="true" className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary font-bold text-white">
                     {i + 1}
                   </span>
+                  {i !== steps.length - 1 && <span className="w-0.5 flex-1 bg-primary/30" aria-hidden="true" />}
+                 </div>
                 <span className='flex size-12 shrink-0 items-center justify-center rounded-xl bg-surface-alt text-primary'><item.Icon className="size-6" aria-hidden="true" /></span>
-                <div className='min-w-0'>
+               
+                <div className={`min-w-0 flex-1 pb-6 ${i !== steps.length - 1 ? 'border-b border-primary/10' : ''}`}>
                 <p className='font-bold text-primary '>{item.title}</p>
                 <p className='text-text-muted'>{item.body}</p>
                 </div></li>
