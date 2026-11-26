@@ -1,3 +1,10 @@
-export default function LoginPage() {
-  return <h1 className="text-3xl font-bold text-teal-700">Login</h1>;
+import LogoutButton from "@/components/admin/LogoutButton";
+
+export default function AdminPage() {
+  return (
+    <div>
+      <h1>Admin dashboard</h1>
+      <LogoutButton />
+    </div>
+  );
 }
